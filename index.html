@@ -18,6 +18,17 @@
 </div>
 
 <button id="startBtn">出勤カウンター</button>
+<button onclick="adjustCount()">出勤日数調整</button>
+
+<div id="adjustArea" class="hidden">
+
+<h2>出勤日数変更</h2>
+
+<input id="countInput" type="number">
+
+<button onclick="saveCount()">保存</button>
+
+</div>
 <div id="checkArea" class="hidden">
 <h2>前回の出勤ツイートは投稿しましたか？</h2>
 
