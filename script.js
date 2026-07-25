@@ -44,7 +44,8 @@ function selectNightType(type) {
 
   nightType = type;
   currentType = "night";
-
+document.getElementById("firstLabel").textContent = "前";
+document.getElementById("secondLabel").textContent = "後";
   document.getElementById("inputArea").classList.remove("hidden");
 
   let date = new Date();
