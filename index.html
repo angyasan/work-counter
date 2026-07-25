@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>出勤カウンター</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<div class="container">
+
+<h1>出勤カウンター</h1>
+
+<div id="countArea">
+現在：<span id="count">1066</span>日目
+</div>
+
+<button id="startBtn">出勤カウンター</button>
+
+<div id="appArea" class="hidden">
+
+<h2 id="workSelectTitle">勤務を選択</h2>
+
+<button onclick="selectDay()">☀️ 昼勤</button>
+<button onclick="selectNight()">🌙 夜勤</button>
+
+<div id="nightArea" class="hidden">
+<h2>夜勤を選択</h2>
+<button onclick="selectNightType('C')">C</button>
+<button onclick="selectNightType('D')">D</button>
+<button onclick="selectNightType('E')">E</button>
+<button onclick="selectNightType('F')">F</button>
+</div>
+
+<div id="inputArea" class="hidden">
+
+<h2 id="title"></h2>
+
+<label id="firstLabel">前</label>
+<textarea id="first"></textarea>
+
+<label id="secondLabel">後</label>
+<textarea id="second"></textarea>
+
+<label>残業</label>
+<textarea id="overtime">なし</textarea>
+
+<button onclick="postX()">Xで投稿</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
