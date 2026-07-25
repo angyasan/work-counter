@@ -128,3 +128,24 @@ function postedNo(){
   document.getElementById("appArea").classList.remove("hidden");
 
 }
+
+function adjustCount(){
+
+  document.getElementById("adjustArea").classList.remove("hidden");
+
+  document.getElementById("countInput").value = count;
+
+}
+
+
+function saveCount(){
+
+  count = Number(document.getElementById("countInput").value);
+
+  localStorage.setItem("workCount", count);
+
+  document.getElementById("count").textContent = count;
+
+  document.getElementById("adjustArea").classList.add("hidden");
+
+}
