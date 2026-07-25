@@ -15,7 +15,7 @@ document.getElementById("startBtn").onclick = function() {
 function selectDay() {
 
   currentType = "day";
-
+document.getElementById("nightArea").classList.add("hidden");
   document.getElementById("inputArea").classList.remove("hidden");
 
   document.getElementById("firstLabel").textContent = "午前";
