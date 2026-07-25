@@ -74,17 +74,14 @@ function postX() {
   let overtime = document.getElementById("overtime").value;
 
 
-  let text =
+ let text =
 `${title}
 
-${firstLabel}
-${first}
+${firstLabel} ${first}
 
-${secondLabel}
-${second}
+${secondLabel} ${second}
 
-残業
-${overtime}`;
+残業${overtime}`;
 
 
   let url =
