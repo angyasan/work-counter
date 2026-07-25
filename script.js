@@ -34,6 +34,9 @@ document.getElementById("nightArea").classList.add("hidden");
 // 夜勤
 function selectNight() {
 
+  document.getElementById("firstLabel").textContent = "前";
+  document.getElementById("secondLabel").textContent = "後";
+
   document.getElementById("nightArea").classList.remove("hidden");
 
 }
