@@ -1,14 +1,21 @@
 let count = localStorage.getItem("workCount") || 1066;
-
+let posted = localStorage.getItem("posted");
 document.getElementById("count").textContent = count;
 
 let currentType = "";
 let nightType = "";
 
 document.getElementById("startBtn").onclick = function() {
-  document.getElementById("appArea").classList.remove("hidden");
+
   document.getElementById("startBtn").classList.add("hidden");
-};
+
+  if (posted === "true") {
+    document.getElementById("checkArea").classList.remove("hidden");
+  } else {
+    document.getElementById("appArea").classList.remove("hidden");
+  }
+
+    };
 
 
 // 昼勤
@@ -94,5 +101,30 @@ ${secondLabel} ${second}
 
 
   window.open(url, "_blank");
+  localStorage.setItem("posted", "true");
+
+}
+
+function postedYes(){
+
+  count++;
+
+  localStorage.setItem("workCount", count);
+  localStorage.setItem("posted", "false");
+
+  document.getElementById("count").textContent = count;
+
+  document.getElementById("checkArea").classList.add("hidden");
+  document.getElementById("appArea").classList.remove("hidden");
+
+}
+
+
+function postedNo(){
+
+  localStorage.setItem("posted", "false");
+
+  document.getElementById("checkArea").classList.add("hidden");
+  document.getElementById("appArea").classList.remove("hidden");
 
 }
