@@ -54,11 +54,17 @@ function selectNightType(type) {
 
   nightType = type;
   currentType = "night";
-document.getElementById("firstLabel").textContent = "前";
-document.getElementById("secondLabel").textContent = "後";
+
+  document.getElementById("firstLabel").textContent = "前";
+  document.getElementById("secondLabel").textContent = "後";
   document.getElementById("inputArea").classList.remove("hidden");
 
   let date = new Date();
+
+  // 午前中（0:00～11:59）なら前日に戻す
+  if (date.getHours() < 12) {
+    date.setDate(date.getDate() - 1);
+  }
 
   let week = ["日","月","火","水","木","金","土"];
 
