@@ -58,7 +58,10 @@ function selectNightType(type) {
   document.getElementById("firstLabel").textContent = "前";
   document.getElementById("secondLabel").textContent = "後";
   document.getElementById("inputArea").classList.remove("hidden");
-
+  document.getElementById("inputArea").scrollIntoView({
+  behavior: "smooth",
+  block: "start"
+});
   let date = new Date();
 
   // 午前中（0:00～11:59）なら前日に戻す
